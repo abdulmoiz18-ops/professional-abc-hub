@@ -1,0 +1,2009 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===========================
+   GLOBAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f0f0f;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+a{
+    text-decoration:none;
+    color:white;
+}
+
+ul{
+    list-style:none;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 70px;
+
+    background:#111;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+    border-bottom:2px solid gold;
+
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logo-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.logo{
+
+    width:70px;
+
+    height:70px;
+
+    object-fit:contain;
+
+}
+
+.logo-box h2{
+
+    color:gold;
+
+    font-size:30px;
+
+    letter-spacing:2px;
+
+}
+body{
+    margin:0;
+    padding:0;
+    background-image:url("background.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+/* ===========================
+   NAVIGATION
+=========================== */
+
+.nav-links{
+
+    display:flex;
+
+    gap:40px;
+
+}
+
+.nav-links li{
+
+    display:inline-block;
+
+}
+
+.nav-links a{
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:gold;
+
+}
+
+/* ===========================
+   NAV ICONS
+=========================== */
+
+.nav-icons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+    font-size:24px;
+
+}
+
+.nav-icons i{
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.nav-icons i:hover{
+
+    color:gold;
+
+}
+
+/* ===========================
+   CART
+=========================== */
+
+.cart{
+
+    position:relative;
+
+    cursor:pointer;
+
+}
+
+#cart-count{
+
+    position:absolute;
+
+    top:-10px;
+
+    right:-12px;
+
+    background:red;
+
+    width:22px;
+
+    height:22px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero{
+
+    width:100%;
+
+    height:90vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.60)),
+    url("background.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+/* ===========================
+   HERO CONTENT
+=========================== */
+
+.hero-content{
+
+    max-width:800px;
+
+}
+
+.hero-content h1{
+
+    font-size:70px;
+
+    font-weight:800;
+
+    color:gold;
+
+    margin-bottom:20px;
+
+}
+
+.hero-content p{
+
+    font-size:22px;
+
+    color:#dddddd;
+
+    margin-bottom:35px;
+
+    line-height:1.8;
+
+}
+
+/* ===========================
+   SHOP BUTTON
+=========================== */
+
+.shop-btn{
+
+    padding:16px 45px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:gold;
+
+    color:black;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.shop-btn:hover{
+
+    transform:translateY(-5px);
+
+    background:#ffcc00;
+
+    box-shadow:0 0 20px gold;
+
+}
+/* ===========================
+   PRODUCTS SECTION
+=========================== */
+
+.products{
+    padding:80px 8%;
+    background:#151515;
+}
+
+.products h1{
+    text-align:center;
+    font-size:45px;
+    color:gold;
+    margin-bottom:60px;
+}
+
+.product-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:35px;
+}
+
+/* ===========================
+   PRODUCT CARD
+=========================== */
+
+.card{
+
+    width:280px;
+
+    background:#222;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+
+    transition:.4s;
+
+    text-align:center;
+
+    border:2px solid transparent;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:gold;
+
+    box-shadow:0 0 20px rgba(255,215,0,.4);
+
+}
+
+/* ===========================
+   PRODUCT IMAGE
+=========================== */
+
+.card img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+/* ===========================
+   PRODUCT NAME
+=========================== */
+
+.card h2{
+
+    color:#E0E0E0;
+
+    font-size:22px;
+
+    padding:18px 12px 10px;
+
+    min-height:75px;
+
+}
+
+/* ===========================
+   PRICE
+=========================== */
+
+.price{
+
+    color:gold;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    margin-bottom:10px;
+
+}
+
+/* ===========================
+   STAR RATING
+=========================== */
+
+.rating{
+
+    color:#FFD700;
+
+    font-size:18px;
+
+    margin-bottom:18px;
+
+}
+
+/* ===========================
+   ADD TO CART BUTTON
+=========================== */
+
+.card button{
+
+    width:90%;
+
+    margin-bottom:20px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:gold;
+
+    color:black;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.card button:hover{
+
+    background:#ffbf00;
+
+    transform:scale(1.05);
+
+}
+
+/* ===========================
+   SHOPPING CART SIDEBAR
+=========================== */
+
+.cart-box{
+
+    position:fixed;
+
+    top:90px;
+
+    right:20px;
+
+    width:420px;
+
+    max-height:500px;
+
+    overflow-y:auto;
+
+    background:white;
+
+    color:black;
+
+    border-radius:12px;
+
+    box-shadow:0 0 25px rgba(0,0,0,.4);
+
+    padding:20px;
+
+    display:none;
+
+    z-index:9999;
+
+}
+
+.cart-box h2{
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+}
+
+/* ===========================
+   CART TABLE
+=========================== */
+
+.cart-box table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.cart-box th{
+
+    background:gold;
+
+    color:black;
+
+    padding:12px;
+
+}
+
+.cart-box td{
+
+    padding:10px;
+
+    text-align:center;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+/* Product image inside cart */
+
+.cart-box td img{
+
+    width:55px;
+
+    height:55px;
+
+    object-fit:cover;
+
+    border-radius:8px;
+
+}
+
+/* ===========================
+   TOTAL
+=========================== */
+
+.cart-box h3{
+
+    text-align:right;
+
+    margin-top:20px;
+
+    color:#111;
+
+}
+
+/* ===========================
+   CHECKOUT BUTTON
+=========================== */
+
+.checkout-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-top:20px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:gold;
+
+    color:black;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.checkout-btn:hover{
+
+    background:#ffbf00;
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+.cart-box::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.cart-box::-webkit-scrollbar-thumb{
+
+    background:gold;
+
+    border-radius:10px;
+
+}
+
+.cart-box::-webkit-scrollbar-track{
+
+    background:#eee;
+
+}
+/* ===========================
+   ABOUT SECTION
+=========================== */
+
+.about{
+
+    background:#111;
+
+    padding:90px 8%;
+
+    text-align:center;
+
+}
+
+.about h1{
+
+    color:gold;
+
+    font-size:45px;
+
+    margin-bottom:25px;
+
+}
+
+.about p{
+
+    max-width:900px;
+
+    margin:auto;
+
+    color:#d8d8d8;
+
+    font-size:19px;
+
+    line-height:1.8;
+
+}
+
+.features{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+    margin-top:60px;
+
+}
+
+.feature{
+
+    background:#1f1f1f;
+
+    width:250px;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    transition:.4s;
+
+}
+
+.feature:hover{
+
+    transform:translateY(-10px);
+
+    border:2px solid gold;
+
+}
+
+.feature i{
+
+    font-size:45px;
+
+    color:gold;
+
+    margin-bottom:20px;
+
+}
+
+.feature h3{
+
+    color:white;
+
+    margin-bottom:10px;
+
+}
+
+.feature p{
+
+    color:#bbbbbb;
+
+}
+
+/* ===========================
+   CONTACT
+=========================== */
+
+.contact{
+
+    background:#181818;
+
+    text-align:center;
+
+    padding:80px 8%;
+
+}
+
+.contact h1{
+
+    color:gold;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+.contact-box{
+
+    max-width:700px;
+
+    margin:auto;
+
+    background:#222;
+
+    padding:40px;
+
+    border-radius:15px;
+
+}
+
+.contact-box p{
+
+    font-size:20px;
+
+    margin:20px 0;
+
+    color:white;
+
+}
+
+.contact-box i{
+
+    color:gold;
+
+    margin-right:10px;
+
+}
+
+/* ===========================
+   NEWSLETTER
+=========================== */
+
+.newsletter{
+
+    background:#111;
+
+    text-align:center;
+
+    padding:80px 8%;
+
+}
+
+.newsletter h1{
+
+    color:gold;
+
+    font-size:40px;
+
+}
+
+.newsletter p{
+
+    color:#ddd;
+
+    margin:20px 0 35px;
+
+}
+
+.newsletter form{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+.newsletter input{
+
+    width:350px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+}
+
+.newsletter button{
+
+    background:gold;
+
+    color:black;
+
+    border:none;
+
+    padding:15px 35px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.newsletter button:hover{
+
+    background:#ffbf00;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    background:black;
+
+    color:white;
+
+    padding:60px 8% 20px;
+
+}
+
+.footer-container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    flex-wrap:wrap;
+
+    gap:40px;
+
+}
+
+.footer-container h2{
+
+    color:gold;
+
+    margin-bottom:15px;
+
+}
+
+.footer-container h3{
+
+    color:gold;
+
+    margin-bottom:15px;
+
+}
+
+.footer-container p{
+
+    color:#cccccc;
+
+    line-height:1.7;
+
+}
+
+.footer-container ul{
+
+    list-style:none;
+
+}
+
+.footer-container ul li{
+
+    margin:10px 0;
+
+}
+
+.footer-container ul li a{
+
+    color:#cccccc;
+
+    transition:.3s;
+
+}
+
+.footer-container ul li a:hover{
+
+    color:gold;
+
+}
+
+.social{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.social a{
+
+    width:45px;
+
+    height:45px;
+
+    background:#222;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:20px;
+
+    transition:.3s;
+
+}
+
+.social a:hover{
+
+    background:gold;
+
+    color:black;
+
+}
+
+hr{
+
+    border:1px solid #333;
+
+    margin:40px 0 20px;
+
+}
+
+.copyright{
+
+    text-align:center;
+
+    color:#999;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:992px){
+
+.navbar{
+
+    padding:15px 25px;
+
+    flex-wrap:wrap;
+
+}
+
+.nav-links{
+
+    gap:18px;
+
+}
+
+.hero-content h1{
+
+    font-size:48px;
+
+}
+
+.footer-container{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.social{
+
+    justify-content:center;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.navbar{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.nav-links{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.hero{
+
+    height:70vh;
+
+}
+
+.hero-content h1{
+
+    font-size:38px;
+
+}
+
+.hero-content p{
+
+    font-size:18px;
+
+}
+
+.logo{
+
+    width:60px;
+
+}
+
+.card{
+
+    width:95%;
+
+}
+
+.cart-box{
+
+    width:95%;
+
+    right:10px;
+
+}
+
+.newsletter input{
+
+    width:100%;
+
+}
+
+.newsletter button{
+
+    width:100%;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.products h1,
+.about h1,
+.contact h1,
+.newsletter h1{
+
+    font-size:32px;
+
+}
+
+.hero-content h1{
+
+    font-size:30px;
+
+}
+
+.hero-content p{
+
+    font-size:16px;
+
+}
+
+.shop-btn{
+
+    width:100%;
+
+}
+
+}
+.cart-box td button{
+
+    background:gold;
+
+    color:black;
+
+    border:none;
+
+    padding:5px 10px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    margin:2px;
+
+    font-weight:bold;
+
+}
+
+.cart-box td button:hover{
+
+    background:#ffbf00;
+
+}
+#checkout-form{
+
+margin-top:20px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+
+}
+
+#checkout-form input,
+#checkout-form textarea{
+
+padding:12px;
+
+border:1px solid #ddd;
+
+border-radius:8px;
+
+font-size:16px;
+
+width:100%;
+
+}
+
+#checkout-form textarea{
+
+height:90px;
+
+resize:none;
+
+}
+#cart-items img{
+
+border-radius:10px;
+object-fit:cover;
+
+}
+
+
+.cart-box{
+
+position:fixed;
+right:20px;
+top:80px;
+width:400px;
+background:white;
+padding:20px;
+box-shadow:0 0 20px gray;
+display:none;
+z-index:999;
+
+}
+
+
+.cart-box table{
+
+width:100%;
+text-align:center;
+
+}
+
+
+.checkout-btn{
+
+background:#111;
+color:white;
+padding:12px 20px;
+border:none;
+cursor:pointer;
+margin-top:15px;
+
+}
+
+
+#checkout-form input,
+#checkout-form textarea{
+
+width:100%;
+padding:10px;
+margin:8px 0;
+
+
+}
+
+/* ===========================================
+   CHATBOT WIDGET (bottom-left)
+=========================================== */
+
+#chatbot-toggle{
+
+    position:fixed;
+    left:25px;
+    bottom:25px;
+    width:60px;
+    height:60px;
+    background:gold;
+    color:#111;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:26px;
+    cursor:pointer;
+    box-shadow:0 8px 20px rgba(0,0,0,.4);
+    z-index:9999;
+    transition:.3s;
+
+}
+
+#chatbot-toggle:hover{
+
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 0 25px gold;
+
+}
+
+#chatbot-badge{
+
+    position:absolute;
+    top:-6px;
+    right:-6px;
+    background:red;
+    color:white;
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    font-size:12px;
+    font-weight:bold;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+#chatbot-box{
+
+    position:fixed;
+    left:25px;
+    bottom:100px;
+    width:340px;
+    max-height:480px;
+    background:#1a1a1a;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,.5);
+    display:none;
+    flex-direction:column;
+    overflow:hidden;
+    z-index:9999;
+    border:1px solid #333;
+
+}
+
+.chatbot-header{
+
+    background:gold;
+    color:#111;
+    padding:14px 16px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+.chatbot-header-info{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+}
+
+.chatbot-header-info i{
+
+    font-size:26px;
+
+}
+
+.chatbot-header-info h4{
+
+    font-size:16px;
+    margin:0;
+
+}
+
+.chatbot-status{
+
+    font-size:12px;
+    color:#146c2e;
+    font-weight:600;
+
+}
+
+.chatbot-close{
+
+    font-size:22px;
+    cursor:pointer;
+    line-height:1;
+
+}
+
+.chatbot-messages{
+
+    flex:1;
+    padding:15px;
+    overflow-y:auto;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    max-height:280px;
+    background:#111;
+
+}
+
+.chatbot-messages::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.chatbot-messages::-webkit-scrollbar-thumb{
+
+    background:gold;
+    border-radius:10px;
+
+}
+
+.chat-msg{
+
+    max-width:80%;
+    padding:10px 14px;
+    border-radius:14px;
+    font-size:14px;
+    line-height:1.4;
+    word-wrap:break-word;
+
+}
+
+.chat-msg.bot{
+
+    background:#2a2a2a;
+    color:#f1f1f1;
+    align-self:flex-start;
+    border-bottom-left-radius:4px;
+
+}
+
+.chat-msg.user{
+
+    background:gold;
+    color:#111;
+    align-self:flex-end;
+    border-bottom-right-radius:4px;
+    font-weight:500;
+
+}
+
+.chatbot-quick-replies{
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    padding:10px 15px;
+    background:#111;
+    border-top:1px solid #262626;
+
+}
+/* ================= VISITOR GREETING ================= */
+
+.visitor-greeting {
+    color: gold;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 15px;
+    white-space: nowrap;
+}
+
+@media(max-width: 768px) {
+
+    .visitor-greeting {
+        font-size: 11px;
+        margin-right: 5px;
+    }
+
+}
+
+.chatbot-quick-replies button{
+
+    background:transparent;
+    border:1px solid gold;
+    color:gold;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+    cursor:pointer;
+    transition:.2s;
+
+}
+
+.chatbot-quick-replies button:hover{
+
+    background:gold;
+    color:#111;
+
+}
+
+.chatbot-input-area{
+
+    display:flex;
+    padding:12px;
+    background:#161616;
+    gap:8px;
+    border-top:1px solid #262626;
+
+}
+
+#chatbot-input{
+
+    flex:1;
+    padding:10px 14px;
+    border-radius:20px;
+    border:none;
+    outline:none;
+    font-size:14px;
+    background:#2a2a2a;
+    color:white;
+
+}
+
+#chatbot-input::placeholder{
+
+    color:#999;
+
+}
+
+#chatbot-send{
+
+    background:gold;
+    color:#111;
+    border:none;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition:.2s;
+
+}
+
+#chatbot-send:hover{
+
+    background:#ffbf00;
+    transform:scale(1.08);
+
+}
+
+@media(max-width:480px){
+
+    #chatbot-box{
+
+        width:90vw;
+        left:5vw;
+        bottom:95px;
+
+    }
+
+    #chatbot-toggle{
+
+        left:15px;
+        bottom:15px;
+
+    }
+
+}
+
+/* =========================================
+   ABC HUB - FINAL CSS FIXES
+========================================= */
+
+/* GLOBAL */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px 5%;
+    min-height: 85px;
+    background: #111;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.logo-box h2 {
+    color: gold;
+    font-size: 26px;
+}
+
+/* NAV LINKS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 16px;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: gold;
+}
+
+/* NAV ICONS */
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 21px;
+}
+
+/* VISITOR GREETING */
+
+.visitor-greeting {
+    display: inline-block;
+    color: gold;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border: 1px solid rgba(255, 215, 0, .4);
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.nav-icons > i {
+    cursor: pointer;
+    transition: .3s;
+}
+
+.nav-icons > i:hover {
+    color: gold;
+}
+
+/* =========================================
+   SHOPPING CART
+========================================= */
+
+.cart-box {
+    position: fixed;
+    top: 95px;
+    right: 20px;
+    width: min(450px, calc(100vw - 30px));
+    max-height: 80vh;
+    overflow-y: auto;
+    overflow-x: auto;
+    background: white;
+    color: #111;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,0,0,.5);
+    display: none;
+    z-index: 9999;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cart-header h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.cart-close {
+    font-size: 30px;
+    cursor: pointer;
+    color: #111;
+}
+
+.cart-box table {
+    width: 100%;
+    min-width: 350px;
+    border-collapse: collapse;
+}
+
+.cart-box th {
+    background: gold;
+    color: black;
+    padding: 10px 5px;
+    font-size: 12px;
+}
+
+.cart-box td {
+    padding: 8px 5px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+}
+
+.cart-box td button {
+    background: gold;
+    color: black;
+    border: none;
+    padding: 5px 9px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 2px;
+}
+
+.cart-box td img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-box h3 {
+    text-align: right;
+    margin-top: 20px;
+}
+
+/* =========================================
+   CHECKOUT FORM
+========================================= */
+
+#checkout-form {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+#checkout-form input,
+#checkout-form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+}
+
+#checkout-form input:focus,
+#checkout-form textarea:focus {
+    border-color: gold;
+}
+
+#checkout-form textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 15px;
+    background: gold;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.checkout-btn:hover {
+    background: #ffbf00;
+}
+
+.checkout-btn:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+/* =========================================
+   PRODUCT CARDS
+========================================= */
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    width: 280px;
+    max-width: 100%;
+    background: #222;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: gold;
+}
+
+/* =========================================
+   CART TOAST
+========================================= */
+
+#cart-toast {
+    z-index: 99999;
+}
+
+/* =========================================
+   CHATBOT
+========================================= */
+
+#chatbot-toggle {
+    z-index: 9999;
+}
+
+#chatbot-box {
+    z-index: 9999;
+}
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media(max-width: 992px) {
+
+    .navbar {
+        padding: 15px 20px;
+        justify-content: center;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-icons {
+        gap: 15px;
+    }
+
+}
+
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+
+@media(max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .logo-box {
+        justify-content: center;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .nav-icons {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .visitor-greeting {
+        font-size: 12px;
+    }
+
+    .hero {
+        height: 70vh;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .cart-box {
+        top: 15px;
+        right: 3%;
+        width: 94%;
+        max-height: 85vh;
+    }
+
+}
+/* =========================================
+   SIGN OUT BUTTON  (add to the END of style.css)
+========================================= */
+
+.signout-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    background: transparent;
+    color: gold;
+    border: 1px solid gold;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: .3s;
+}
+
+.signout-btn:hover {
+    background: gold;
+    color: #111;
+}
+
+.signout-btn i {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.nav-icons .signout-btn i:hover {
+    color: inherit;
+}
+
+@media (max-width: 480px) {
+    .signout-btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media(max-width: 480px) {
+
+    .logo-box h2 {
+        font-size: 23px;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .visitor-greeting {
+        font-size: 11px;
+        padding: 6px 9px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+        padding: 0 15px;
+    }
+
+    .products h1,
+    .about h1,
+    .contact h1,
+    .newsletter h1 {
+        font-size: 30px;
+    }
+
+    .contact-box {
+        padding: 20px;
+    }
+
+    .contact-box p {
+        font-size: 15px;
+        overflow-wrap: anywhere;
+    }
+
+    #chatbot-box {
+        width: 90vw;
+        left: 5vw;
+        bottom: 95px;
+    }
+
+}
+
+/* =========================================
+   BUTTON ANIMATIONS
+========================================= */
+
+button {
+    transition: .3s ease;
+}
+
+/* =========================================
+   END ABC HUB CSS FIXES
+========================================= */

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Welcome | ABC HUB</title>
+
+<!-- Already signed in? Go to the shop -->
+<script>
+try {
+    const visitor = JSON.parse(localStorage.getItem("abcHubVisitor") || "null");
+    if (visitor && visitor.name && visitor.email) {
+        window.name = "abcHub:" + JSON.stringify(visitor);
+        window.location.replace("index.html?v=" + encodeURIComponent(JSON.stringify(visitor)));
+    }
+} catch (e) {}
+</script>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    background-color: #0f0f0f;
+    background-image: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)), url("background.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.welcome-box {
+    width: 100%;
+    max-width: 460px;
+    background: #1a1a1a;
+    border: 2px solid gold;
+    border-radius: 18px;
+    padding: 40px 35px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(255,215,0,.25);
+    animation: fadeUp .6s ease both;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.welcome-box img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.welcome-box h1 {
+    color: gold;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.welcome-box p {
+    color: #ccc;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.field {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.field i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gold;
+}
+
+.field input {
+    width: 100%;
+    padding: 14px 15px 14px 44px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background: #2a2a2a;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.field input:focus   { border-color: gold; }
+.field input.invalid { border-color: #ff6b6b; }
+.field input::placeholder { color: #999; }
+
+#welcome-error {
+    color: #ff6b6b;
+    font-size: 14px;
+    min-height: 22px;
+    margin-bottom: 10px;
+}
+
+.continue-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    background: gold;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.continue-btn:hover:not(:disabled) {
+    background: #ffcc00;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px gold;
+}
+
+.continue-btn:disabled {
+    opacity: .7;
+    cursor: not-allowed;
+}
+
+.welcome-box p.privacy-note {
+    margin: 18px 0 0;
+    font-size: 12px;
+    color: #888;
+}
+
+@media (max-width: 480px) {
+    .welcome-box { padding: 30px 22px; }
+    .welcome-box h1 { font-size: 26px; }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<form class="welcome-box" id="welcomeForm" novalidate>
+
+    <img src="logo.png" alt="ABC HUB Logo">
+
+    <h1>Welcome to ABC HUB</h1>
+
+    <p>
+        Shop More. Save More.<br>
+        Please enter your name and email to continue.
+    </p>
+
+    <div class="field">
+        <i class="fas fa-user"></i>
+        <input type="text" id="visitorName" placeholder="Your Full Name"
+               autocomplete="name" maxlength="80" required>
+    </div>
+
+    <div class="field">
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="visitorEmail" placeholder="Your Email Address"
+               autocomplete="email" maxlength="120" required>
+    </div>
+
+    <div id="welcome-error" role="alert"></div>
+
+    <button type="submit" class="continue-btn" id="continueBtn">
+        Continue To Shop <i class="fas fa-arrow-right"></i>
+    </button>
+
+    <p class="privacy-note">
+        <i class="fas fa-lock"></i>
+        Your details are used for store-related communication.
+    </p>
+
+</form>
+
+<!-- Settings (Google Sheet URL) -->
+<script src="config.js"></script>
+
+<script>
+
+// ================= ELEMENTS =================
+
+const form    = document.getElementById("welcomeForm");
+const nameEl  = document.getElementById("visitorName");
+const mailEl  = document.getElementById("visitorEmail");
+const errorEl = document.getElementById("welcome-error");
+const btn     = document.getElementById("continueBtn");
+
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+// ================= SHOW ERROR =================
+
+function showError(message, input) {
+
+    errorEl.textContent = message;
+
+    nameEl.classList.remove("invalid");
+    mailEl.classList.remove("invalid");
+
+    if (input) {
+        input.classList.add("invalid");
+        input.focus();
+    }
+}
+
+// ================= SAVE VISITOR TO GOOGLE SHEET =================
+// keepalive + await = the request is not cancelled when the page changes.
+
+async function saveVisitorToSheet(visitor) {
+
+    const url = String(typeof SHEET_URL !== "undefined" ? SHEET_URL : "").trim();
+    if (url.indexOf("https://script.google.com/") !== 0) {
+        console.warn("SHEET_URL is not set in config.js. Visitor was NOT saved to Google Sheet.");
+        return;
+    }
+
+    const request = fetch(url, {
+        method: "POST",
+        mode: "no-cors",
+        keepalive: true,
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify({
+            type: "visitor",
+            name: visitor.name,
+            email: visitor.email
+        })
+    });
+
+    // Wait for the request, but never longer than 6 seconds
+    await Promise.race([
+        request,
+        new Promise(function (resolve) { setTimeout(resolve, 6000); })
+    ]);
+
+    // no-cors gives an opaque answer, so success cannot be confirmed here.
+    // Check the Executions page in Apps Script if a row is missing.
+}
+
+// ================= FORM SUBMIT =================
+
+form.addEventListener("submit", async function (e) {
+
+    e.preventDefault();
+
+    const name  = nameEl.value.trim();
+    const email = mailEl.value.trim();
+
+    if (name.length < 2) {
+        showError("Please enter your full name.", nameEl);
+        return;
+    }
+
+    if (!emailPattern.test(email)) {
+        showError("Please enter a valid email address.", mailEl);
+        return;
+    }
+
+    showError("");
+
+    const visitor = { name: name, email: email };
+
+    btn.disabled = true;
+    btn.textContent = "Saving your details...";
+
+try {
+    await saveVisitorToSheet(visitor);
+} catch (err) {
+    console.error("Sheet save failed:", err);
+}
+
+try {
+    localStorage.setItem("abcHubVisitor", JSON.stringify(visitor));
+} catch (err) {}
+
+window.name = "abcHub:" + JSON.stringify(visitor);
+
+btn.textContent = "Welcome to ABC HUB!";
+window.location.replace("index.html?v=" + encodeURIComponent(JSON.stringify(visitor)));
+
+});
+
+</script>
+
+</body>
+</html>
